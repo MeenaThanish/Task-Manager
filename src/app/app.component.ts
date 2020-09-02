@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task';
+  tasks = ['task1', 'task2', 'task3', 'task4','task5'];
+  InprogressTask=[];
+  CompletedTask=[];
+  updateProgress(task,state){
+
+if(state=="Inprogress"){
+  this.InprogressTask.push(task);
+}
+else if(state=="completed"){
+this.CompletedTask.push(task);
+}
+  }
 }
